@@ -52,5 +52,3 @@ Supported demo job types:
 - Add integration tests using Testcontainers for PostgreSQL, Redis and RabbitMQ; the included test is only a smoke test.
 - Priority applies to messages waiting in RabbitMQ; it cannot preempt a job already executing.
 
-## Useful interview topics demonstrated
-Transactional Outbox, at-least-once delivery, idempotency, conditional updates, worker concurrency, message acknowledgements, retries, DLQ, backpressure, rate limiting, observability, horizontal scaling.
