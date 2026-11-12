@@ -1,0 +1,3 @@
+package com.example.jobplatform.controller;
+import org.springframework.http.*;import org.springframework.web.bind.annotation.*;import java.util.*;
+@RestControllerAdvice public class ApiExceptionHandler {@ExceptionHandler(IllegalArgumentException.class) ResponseEntity<?> badRequest(Exception e){return ResponseEntity.badRequest().body(Map.of("error",e.getMessage()));}@ExceptionHandler(NoSuchElementException.class) ResponseEntity<?> missing(Exception e){return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error",e.getMessage()));}@ExceptionHandler(Exception.class) ResponseEntity<?> generic(Exception e){return ResponseEntity.status(500).body(Map.of("error","Internal server error"));}}
